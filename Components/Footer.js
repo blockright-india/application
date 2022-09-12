@@ -10,10 +10,7 @@ import {
   chakra,
   useColorModeValue,
 } from '@chakra-ui/react';
-// import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
 
-// import AppStoreBadge from '@/components/AppStoreBadge';
-// import PlayStoreBadge from '@/components/PlayStoreBadge';
 
 const ListHeader = ({ children }) => {
   return (
@@ -53,26 +50,30 @@ const SocialButton = ({
 export default function Footer() {
   return (
     <Box
-      bg={useColorModeValue('gray.50', 'gray.900')}
+      bg={'brand.100'}
       color={useColorModeValue('gray.700', 'gray.200')}>
       <Container as={Stack} maxW={'6xl'} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
-          <Stack align={'flex-start'}>
-            <ListHeader>Company</ListHeader>
-            <Link href={'#'}>About Us</Link>
-            <Link href={'#'}>Blog</Link>
-            <Link href={'#'}>Careers</Link>
-            <Link href={'#'}>Contact Us</Link>
+        <Stack align={'flex-start'}>
+          <Text fontSize={'3xl'} color="blue.100" fontWeight={'bold'}>Blockright</Text>
+            <Text color="white">lorem ipsum dollar sit</Text>
+          </Stack>
+          <Stack align={'flex-start'} color="white">
+            <ListHeader >Company</ListHeader>
+            <Link href={'#'} >About Us</Link>
+            <Link href={'#'} >Blog</Link>
+            <Link href={'#'} >Careers</Link>
+            <Link href={'#'} >Contact Us</Link>
           </Stack>
 
-          <Stack align={'flex-start'}>
+          <Stack align={'flex-start'} color="white">
             <ListHeader>Support</ListHeader>
             <Link href={'#'}>Help Center</Link>
             <Link href={'#'}>Safety Center</Link>
             <Link href={'#'}>Community Guidelines</Link>
           </Stack>
 
-          <Stack align={'flex-start'}>
+          <Stack align={'flex-start'} color="white">
             <ListHeader>Legal</ListHeader>
             <Link href={'#'}>Cookies Policy</Link>
             <Link href={'#'}>Privacy Policy</Link>
@@ -88,10 +89,7 @@ export default function Footer() {
         </SimpleGrid>
       </Container>
 
-      <Box
-        borderTopWidth={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.700')}>
+      <Box> 
         <Container
           as={Stack}
           maxW={'6xl'}
@@ -100,7 +98,7 @@ export default function Footer() {
           spacing={4}
           justify={{ md: 'space-between' }}
           align={{ md: 'center' }}>
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+          <Text color="white">© 2022 Blockright. All rights reserved</Text>
           {/* <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />
