@@ -22,7 +22,7 @@ import {
 export default function Header() {
 
   return (
-    <Container maxW={'7xl'}>
+    <>
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
@@ -38,6 +38,7 @@ export default function Header() {
             <Text
               as={'span'}
               position={'relative'}
+              color={'white'}
               fontWeight='800'
               fontSize={{ md: '7xl', sm: '3xl' }}
             >
@@ -46,26 +47,26 @@ export default function Header() {
             <br />
             <Text
               as={'span'}
-              color={'red.400'}
+              color="white"
               fontWeight={800}
               fontSize={{ md: '6xl', sm: '4xl' }}
             >
-              Digital NFT Art
+              Digital <b style={{ color: '#FF9100' }}>NFT</b> Art
             </Text>
           </Heading>
           <Text
-            color={'black'}
+            color={'white'}
             fontSize={{ md: 'sm', sm: '1em' }}
             lineHeight={2}
             fontWeight='light'
             width={{ md: 500, sm: 430 }}
           >
-            Snippy is a rich coding snippets app that lets you create your own
-            code snippets, categorize them, and even sync them in the cloud so
-            you can use them anywhere. All that is free!
+            Add funds to vour crvoto account to start
+            trodino crvoto. you con add tunds witho voriet
+            of payment methods
           </Text>
 
-    
+
         </Stack>
         <Flex
           flex={1}
@@ -116,7 +117,7 @@ export default function Header() {
           </Box>
         </Flex>
       </Stack>
-    </Container>
+    </>
   );
 }
 

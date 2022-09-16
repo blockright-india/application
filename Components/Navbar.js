@@ -14,6 +14,8 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    Container,
+    background,
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -26,15 +28,14 @@ import {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
+      <Container maxW={"7xl"}>
+
       <Box>
         <Flex
-          bg={useColorModeValue('white', 'gray.800')}
-          color={useColorModeValue('gray.600', 'white')}
+          color={'white'}
           minH={'60px'}
-          py={{ base: 2 }}
+          py={{ base: 6 }}
           px={{ base: 4 }}
-          borderBottom={1}
-          borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
           align={'center'}>
           <Flex
@@ -54,11 +55,13 @@ import {
             <Text
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
-              color={useColorModeValue('gray.800', 'white')}>
-              Logo
+              fontSize={22}
+              fontWeight='bold'
+              color='blue.100'>
+              Blockright
             </Text>
   
-            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+            <Flex display={{ base: 'none', md: 'flex' }} alignItems="center" ml={10}>
               <DesktopNav />
             </Flex>
           </Flex>
@@ -68,25 +71,22 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <Button
-              as={'a'}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'#'}>
-              Sign In
-            </Button>
+            
             <Button
               display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
+              height='48px'
+              width='200px'
+              border='1px'
               fontWeight={600}
+              bg={'darkBlue.100'}
               color={'white'}
-              bg={'pink.400'}
+              borderColor='blue.500'
               href={'#'}
-              _hover={{
-                bg: 'pink.300',
-              }}>
-              Sign Up
+              // _hover={{
+              //   bg: 'pink.300',
+              // }} 
+              >
+              Connect Wallet
             </Button>
           </Stack>
         </Flex>
@@ -95,18 +95,20 @@ import {
           <MobileNav />
         </Collapse>
       </Box>
+      </Container>
+
     );
   }
   
   const DesktopNav = () => {
-    const linkColor = useColorModeValue('gray.600', 'gray.200');
+    const linkColor = 'white';
     const linkHoverColor = useColorModeValue('gray.800', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   
     return (
       <Stack direction={'row'} spacing={4}>
         {NAV_ITEMS.map((navItem) => (
-          <Box key={navItem.label}>
+          <Box key={navItem.label} alignItems="center">
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <PopoverTrigger>
                 <Link

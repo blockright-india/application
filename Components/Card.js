@@ -21,7 +21,7 @@ import {
   };
   
   
-  function ProductCard() {
+  const Card = () => {
     return (
       <Flex p={50} w="full" alignItems="center" justifyContent="center">
         <Box
@@ -88,4 +88,4 @@ import {
     );
   }
   
-  export default ProductCard;
+  export default Card;
