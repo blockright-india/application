@@ -37,7 +37,7 @@ import {
           <Heading fontSize={'2xl'} fontFamily={'body'} color="white">
             Lindsey James
           </Heading>
-          <Text fontWeight={600} color={'gray.500'} mb={4} color="white">
+          <Text fontWeight={600} color={'gray.500'} mb={4} >
             @lindsey_jam3s
           </Text>
           <Text
