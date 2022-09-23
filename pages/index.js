@@ -52,7 +52,7 @@ export default function Home() {
           <SimpleGrid columns={3}>
             {featureData.map((item, index) => {
               return (
-                <FeatureCard />
+                <FeatureCard key={index} />
               )
             })}
           </SimpleGrid>

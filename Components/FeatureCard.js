@@ -11,9 +11,9 @@ import {
     useColorModeValue,
   } from '@chakra-ui/react';
   
-  export default function FeatureCard() {
+  export default function FeatureCard(props) {
     return (
-      <Center py={6}>
+      <Center py={6} key={props.key}>
         <Box
           maxW={'360px'}
           w={'full'}

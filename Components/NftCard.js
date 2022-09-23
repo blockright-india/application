@@ -2,7 +2,7 @@ import { Box, Tooltip } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import React from "react";
 
-function NftCard({ imageSrc, name, tokenId, contractType, symbol, contractAddress }) {
+function NftCard({ imageSrc, name, tokenId, contractType, symbol, contractAddress, key }) {
     const router = useRouter()
 
     const handleSelect = () => {
@@ -21,7 +21,7 @@ function NftCard({ imageSrc, name, tokenId, contractType, symbol, contractAddres
     }
 
   return (
-    <Box margin={"1"} onClick={handleSelect}>
+    <Box margin={"1"} onClick={handleSelect} key={key}>
       <img src={`${imageSrc}`} width={150} height={150}  />
       <h3>{name} #{tokenId}</h3>
       <Tooltip label={contractAddress}>

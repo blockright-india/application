@@ -40,16 +40,17 @@ function Nfts() {
           fontWeight="extrabold"
           textAlign={"center"}
         >
-          NFT's
+         {` NFT's`}
         </Text>
 
        <Box display={"flex"} flexWrap="wrap">
-       {nfts?.map((nft) => {
+       {nfts?.map((nft, index) => {
           const metaData = JSON.parse(nft.metadata);
             console.log(nft);
           if (metaData !== null) {
             return (
               <NftCard
+              key={index}
                 imageSrc={metaData?.image}
                 name={nft.name}
                 symbol={nft.symbol}
